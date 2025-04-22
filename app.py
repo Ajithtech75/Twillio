@@ -42,7 +42,6 @@ SCRIPT = [
 app = Flask(__name__)
 
 def generate_audio(text: str) -> bytes:
-    """Generate Tamil speech using ElevenLabs"""
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/stream"
     headers = {'xi-api-key': ELEVEN_API_KEY, 'Content-Type': 'application/json'}
     payload = {
